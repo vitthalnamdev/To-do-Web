@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.container{
+  display: flex;
+  justify-content: center;
+  width: 1000 px;
+  height: 100vh;
+  color:#61dafb;
+  h4{
+    display: flex;
+    justify-content: center;
+  }
+}
