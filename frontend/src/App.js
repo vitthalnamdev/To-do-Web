@@ -4,11 +4,13 @@ import Todo_list from "./MyComponents/Todo_list";
 import Footer from "./MyComponents/Footer";
 import Form from "./MyComponents/form";
 import "./App.css";
- 
+
+const HOST = https://to-do-web-backend.onrender.com;
+
 const App = () => {
     const Delete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:2000/data/${id}`, {
+            const response = await fetch(`${HOST}/data/${id}`, {
                 method: 'DELETE',
             });
             if (response.ok){  
@@ -40,7 +42,7 @@ const App = () => {
 
   const addTodo = async (todo) => {
     try {
-        const response = await fetch('http://localhost:2000/data', {
+        const response = await fetch(`${HOST}/data`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -59,7 +61,7 @@ const App = () => {
   ]);
 
     useEffect(() => {
-        fetch('http://localhost:2000/')
+        fetch(HOST)
             .then(response => response.json())  
             .then(async data => {
                 setTodos(data);  

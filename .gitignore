@@ -8,7 +8,6 @@
 /.vs
 /backend/.vs
 /backend/node_modules
-/backend/.env
 /frontend/node_modules
 # testing
 /coverage

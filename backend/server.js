@@ -17,7 +17,8 @@ app.use(express.json()); // Parse JSON requests
 const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017'; // Replace with your MongoDB URI
 const dbName = "Todo's"; // Your database name
 const collectionName = 'TodoList'; // Your collection name
-
+//vitthal7804
+//7scGmwPmHskqJf3a
 
 async function connectDB() {
     const client = new MongoClient(mongoURI);
@@ -82,7 +83,7 @@ app.delete('/data/:id', async (req, res) => {
     }
 });
 
-console.log(process.env.PORT);
+ 
 const PORT = process.env.PORT || 2000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
