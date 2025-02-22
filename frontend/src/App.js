@@ -5,9 +5,10 @@ import Footer from "./MyComponents/Footer";
 import Form from "./MyComponents/form";
 import "./App.css";
 
-const HOST = "https://to-do-web-backend.onrender.com";
+
 
 const App = () => {
+    const HOST = "https://to-do-web-backend.onrender.com";
     const [todos, setTodos] = useState([]);
     const [count, incrementCount] = useState(1);
     const [isOpen, setIsOpen] = useState(false);
