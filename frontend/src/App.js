@@ -10,18 +10,17 @@ const HOST = "https://to-do-web-backend.onrender.com";
 const App = () => {
     const Delete = async (id) => {
         try {
-            let temp = [];
-            for (let item in todos) {
-                if (todos[item]._id !== id) {
-                    temp.push(todos[item]);
-                }
-            }
-            setTodos(temp);
             const response = await fetch(`${HOST}/data/${id}`, {
                 method: 'DELETE',
             });
             if (response.ok){  
-               // do nothing.
+                let temp = [];
+                for (let item in todos) {
+                    if (todos[item]._id !== id) {
+                        temp.push(todos[item]);
+                    }
+                }
+                setTodos(temp);
             } else {
                 console.log("Error in deleting");
             }
