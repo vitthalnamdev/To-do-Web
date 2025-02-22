@@ -52,11 +52,12 @@ const App = () => {
     useEffect(() => {
         const fetchTodos = async () => {
             try {
-                const response = await fetch(`${HOST}/data`);
+                const response = await fetch(`${HOST}/`);
                 const data = await response.json();
                 setTodos(data);
                 console.log(data);
             } catch (err) {
+                console.log("HELLO");
                 console.log(err);
             }
         };
