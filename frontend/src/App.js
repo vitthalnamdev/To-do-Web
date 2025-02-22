@@ -20,10 +20,7 @@ const App = () => {
             const response = await fetch(`${HOST}/data/${id}`, {
                 method: 'DELETE',
             });
-
-            if (response.ok == false) 
-                console.log("Error in deleting");
-            }
+            
         } catch (err) {
             console.error('Error updating item:', err);
         }
