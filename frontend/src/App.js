@@ -16,12 +16,13 @@ const App = () => {
     
     const Delete = async (id) => {
         try {
+            setTodos((prevTodos) => prevTodos.filter((item) => item._id !== id));
             const response = await fetch(`${HOST}/data/${id}`, {
                 method: "DELETE",
             });
 
             if (response.ok) {
-                setTodos((prevTodos) => prevTodos.filter((item) => item._id !== id));
+                // do nothing.
             } else {
                 console.log("Error in deleting");
             }
