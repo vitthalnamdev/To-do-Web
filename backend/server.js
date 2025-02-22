@@ -82,6 +82,7 @@ app.delete('/data/:id', async (req, res) => {
     }
 });
 
+console.log(process.env.PORT);
 const PORT = process.env.PORT || 2000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
